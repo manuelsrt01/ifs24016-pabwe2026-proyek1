@@ -1,0 +1,31 @@
+{
+  "name": "ifs24016-pabwe2026-proyek1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TanaRead - Pelacak Kebiasaan Membaca (front-end React + Vite). Back-end ada di repository terpisah: ifs24016-pabwe2026-proyek1-backend.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.0.0",
+    "jsdom": "^25.0.1",
+    "vite": "^6.0.7",
+    "vitest": "^3.0.0"
+  }
+}

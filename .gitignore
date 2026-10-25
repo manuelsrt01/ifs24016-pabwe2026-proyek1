@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+# Artefak pipeline Jenkins/Trivy/Sonar
+.scannerwork/
+.trivy-cache/
+trivy-results.sarif
+latest-app.zip
