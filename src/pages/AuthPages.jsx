@@ -73,9 +73,10 @@ function AuthForm({ mode }) {
 
   const field = (name, label, props) => (
     <div className="field">
-      <label htmlFor={`auth-${name}`}>{label}</label>
+      <label htmlFor={`${mode}-${name}-input`}>{label}</label>
       <input
-        id={`auth-${name}`}
+        id={`${mode}-${name}-input`}
+        name={name}
         value={values[name]}
         onChange={(e) => set(name, e.target.value)}
         {...props}
@@ -91,7 +92,12 @@ function AuthForm({ mode }) {
   const passwordAutocomplete = isRegister ? "new-password" : "current-password";
   return (
     <AuthShell title={copy.title} subtitle={copy.subtitle} footer={copy.footer}>
-      <form className="form" onSubmit={submit} noValidate>
+      <form
+        className="form"
+        onSubmit={submit}
+        noValidate
+        data-testid={`${mode}-form`}
+      >
         {formError && (
           <div className="alert alert-error" role="alert">
             {formError}
@@ -115,6 +121,7 @@ function AuthForm({ mode }) {
             autoComplete: "new-password",
           })}
         <button
+          id={`${mode}-submit-button`}
           type="submit"
           className="btn btn-primary btn-block"
           disabled={busy}
