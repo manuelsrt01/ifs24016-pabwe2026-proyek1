@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://ifs24016-pabwe2026-proyek1-be.vercel.app/api/:path*"
+      "destination": "https://open-api.delcom.org/api/v1/:path"
     },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
